@@ -1,0 +1,36 @@
+<div class="container mx-auto">
+    <div class="flex">
+      <div class="w-full">
+        <div class="bg-white shadow-md rounded-md">
+          <div class="bg-gray-700 text-white px-4 py-2">
+            <h4 class="text-lg font-semibold">Search Github user</h4>
+          </div>
+          <div class="p-4">
+            <form class="flex" (submit)="searchUser()">
+              <div class="flex-1 mr-3">
+                <input [(ngModel)]="githubUserQuery" name="user" type="search" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none" placeholder="Enter your GitHub username" autocomplete="off">
+              </div>
+              <button type="submit" class="bg-[#0077cc] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="flex mt-3">
+      <div class="w-full">
+        <pre>
+          <app-github-profile [githubProfile]="githubProfile"></app-github-profile>
+        </pre>
+      </div>
+    </div>
+  
+    <div class="flex mt-3">
+      <div class="w-full">
+        <pre>
+          <app-github-repos [githubRepos]="githubRepos"></app-github-repos>
+        </pre>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,10 @@
+<div class="bg-white shadow-md rounded-md">
+    <img [src]="githubProfile.avatar_url" alt="" class="w-full rounded-full" />
+  
+    <div class="p-4">
+      <h4 class="text-lg font-semibold">{{githubProfile.name}}</h4>
+      <p style="text-wrap:balance">{{githubProfile.bio}}</p>
+      <a [href]="githubProfile.html_url" target="_blank" class="inline-block bg-green-500 text-white px-4 py-2 rounded-md mt-2">Profile</a>
+    </div>
+  </div>
+  
